@@ -1,0 +1,18 @@
+{
+  "name": "urlstatuschecker",
+  "version": "0.0.1",
+  "description": "A command line tool for check all the url's status inside the local html file",
+  "main": "urlstatuschecker.js",
+  "bin": {
+    "urlstatuschecker": "urlstatuschecker.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "get-hrefs": "^4.0.0",
+    "optimist": "^0.6.1",
+    "sync-request": "^6.1.0"
+  },
+  "devDependencies": {},
+  "author": "Junyong Liu",
+  "license": "ISC"
+}
