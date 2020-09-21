@@ -1,14 +1,14 @@
 # urlStatusChecker
-urlStatusChecker is a command-line tool written in Node.js for check all the URL's status inside your local Html file.
+urlStatusChecker is a command-line tool written in Node.js for check all the URL's status inside your local file.
 The current version 0.0.1.
 # how do I install this?
-Firstly, download node.js https://nodejs.org/en/download/. Then download this repo. <br>
+Download this repo. <br>
+run npm install -g pathName. For example: npm install -g C:\Seneca\OSD600\Release0.1 <br>
+or "cd" to the path directory then run npm link / npm install -g<br>
 # how do I run it?
-Run the tool locally(run at the tool directory):<br>
-Run commands using "toolpath> node urlStatusChecker filename".<br>
-Run the tool globally (run the tool at any directory):<br>
-Run commands using "toolpath> npm link", then run the command using "urlstatuschecker filename".<br>
+run the command using "urlstatuschecker filename".<br>
 # IMPORTANT!
-The current 0.0.1 version only accept .html file and make sure your ".html" file is in your current directory.
+Make sure your the file you are checking is in your current directory.
 # Available command options
--v / -version: Show the Current version of urlStatusChecker.
+-v / -version: Show the Current version of urlStatusChecker.<br>
+-u: Check the url status directly. For example: urlstatuschecker -u http://www.google.com.
