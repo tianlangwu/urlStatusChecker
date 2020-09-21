@@ -1,0 +1,169 @@
+OSD & DPS909 Fall 2020 - Release 0.1
+From CDOT Wiki
+Jump to: navigation, search
+Contents
+1 Release 0.1
+1.1 Due Date
+1.2 Overview
+1.3 Learning Goals
+1.4 Requirements and Features: Implement All
+1.5 Optional Features: Pick 2
+1.6 Getting Help
+1.7 Requirements
+1.8 Submission
+Release 0.1
+Due Date
+Friday September 25th.
+
+Overview
+You are tasked with building a command-line tool for finding and reporting dead links (e.g., broken URLs) in a file. Users might use your tool to help locate broken URLs in an HTML page, for example. Your tool can be written in any programming language.
+
+This first release is designed to expose you to the common workflows and tools involved in contributing to open source projects on GitHub. In order to give every student a similar learning experience, we will all be working on the same project.
+
+This first release is also aimed at putting you in the role of "open source creator" and later "open source maintainer." You will use the code you write in this assignment in subsequent labs during the course to explore various aspects of open source work.
+
+NOTE: in subsequent releases, you will have more freedom to work on different projects.
+
+Learning Goals
+In addition to the actual code you will write, the ultimate goal of this first release is to help you gain experience in many aspects of open source development, specifically:
+
+gaining some experience in a programming langauge by building a real-world tool
+working with the basics of git, including branches, commits, etc.
+creating open source projects on GitHub
+writing about your own work via your Blog
+Requirements and Features: Implement All
+You must complete all of the following requirements and features:
+
+pick a name for your tool. Try not to pick a name that is already used by other projects.
+create a GitHub Repo for your project, see https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo
+choose an OSI Approved Open Source Licence for your project and include a LICENSE file in your rep, see https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository
+create a README.md file, and keep it updated as you write your code, documenting how to use your tool, which features you include, etc.
+choose a programming language. You can use a language you know and love, or something new that you've never used before and want to learn.
+create a command-line tool in your chosen language. It must support all of the following:
+running the tool with no arguments should print a standard help/usage message showing how to run the tool, which command line arguments can be passed, etc.
+running the tool with a filename should cause the file to be processed. For example, tool_name index.html should check for broken links in the file named index.html in the current directory.
+when processing a file, the tool should look for all URLs using the http:// and https:// schemes. Every http:// or https:// URL in the given file should be processed.
+when processing a URL, your tool should attempt to do a network request of the given URL and check the resulting HTTP code. To begin with, an HTTP 200 result should be considerd "good" and a 400 or 404 considered "bad." Any other result should be "unknown"
+after a URL is processed, print it to out along with whether it was good, bad, or unknown. Each URL should get its own line.
+Optional Features: Pick 2
+In addition to the required features, you are asked to pick 2 of the following optional features to include in your submission:
+
+colourize your output. Good URLs should be printed in green, bad URLs in red, and unknown URLs in gray
+running the tool with the v or version argument should print the name of the tool and its version
+support both Windows and Unix style command line args (e.g., --version vs. /v)
+allow passing multiple file paths to your tool vs. a single path
+allow passing directory paths vs. file paths, and recursively process all children under that directory
+allow passing glob patterns (e.g., *.txt) to find files to process
+add support for non-text file formats, looking for URLs within binary data (e.g., UTF-8 strings embedded in binary)
+add support for more HTTP result codes. For example, redirects with 301, 307, 308 (i.e., follow the redirect to the new location)
+add support for timeouts, DNS resolution issues, or other server errors when accessing a bad URL. A bad domain, URL, or server shouldn't crash your tool.
+add a command line flag to allow checking for archived versions of URLs using the WayBackMachine, see https://archive.org/help/wayback_api.php
+add a command line flag to allow specifying a custom User Agent string when doing network requests.
+add a command line flag to allow checking whether http:// URLs actually work using https://
+add support for parallelization, using multiple CPU cores so your program can do more than one thing at a time
+optimize your network code so that you only request headers vs. downloading full bodies (e.g., use HEAD)
+come up with your own idea. If you have an idea not listed above, talk to your professor and see if it's OK to implement that (it probably is).
+Getting Help
+For this assignment, everyone must do their own work, but that doesn't mean you can't talk to your colleagues. At every stage of your work, make sure you ask for help, share ideas, and get feedback from others in the class. Please use Open Source Slack to help with communication.
+
+Try using community-based, open, collaborative development practices. This means talking with others about your work, and talking to them about theirs, asking for and giving help, and focusing on people as well as code. It also means doing this in public (e.g., on Slack) instead of in private. The goal is to support each other and for us to start building a communinity.
+
+Requirements
+You will be graded on the following. Please make sure you have addressed everything that makes sense below:
+
+GitHub Repo exists
+GitHub Repo contains LICENSE file
+GitHub Repo contains a README.md file with clear information on how to use the tool and all of its features
+GitHub README.md is free of typos, spelling mistakes, formatting or other errors
+GitHub Repo contains project's Source Code
+Source Code implements all Mandatory Requirements, and each one is Complete and Working
+Source Code implements 2 of the Optional Requirements, and both are Complete and Working
+Source Code is well written (consistent formatting, code comments, good naming, etc)
+Blog Post documents the project, how to use it, which features it includes, and shows examples of how to use it
+Blog Post contains link to GitHub repo
+Add Info to Table Below
+Submission
+When you have completed all the requirements above, please add your details to the table below.
+
+Name	Blog Post (URL)	GitHub Repo (URL)	Language (e.g., Java)
+Example Name	https://example.com/blog/1	https://github.com/example/tool-name	JavaScript
+Retrieved from "https://wiki.cdot.senecacollege.ca/w/index.php?title=OSD_%26_DPS909_Fall_2020_-_Release_0.1&oldid=147901"
+Navigation menu
+Personal tools
+Log in
+Request account
+Namespaces
+Page
+Discussion
+Variants
+Views
+Read
+View source
+View history
+More
+Search
+Search CDOT Wiki
+Navigation
+CDOT
+SICT AR Meeting Area
+People
+get involved with CDOT
+as a Student
+as an Open Source Community Member
+as a Company
+courses
+BTC640
+BTH740
+BTP300
+DPI908
+DPS901
+DPS905
+DPS909
+DPS911
+DPS914
+DPS915
+DPS924
+DPS931
+EAC234
+ECL500
+GAM531
+GAM666
+GAM670
+GPU610
+LUX Program
+MAP524
+OOP344
+OPS235
+OPS335
+OPS435
+OPS535
+OPS635
+OSD600
+OSD700
+Real World Mozilla
+SBR600
+SEC520
+SPO600
+SRT210
+ULI101
+course projects
+Course Project List
+Potential Course Projects
+Contrib Opportunities
+links
+CDOT
+Planet CDOT
+FSOSS
+Tools
+What links here
+Related changes
+Special pages
+Printable version
+Permanent link
+Page information
+This page was last edited on 9 September 2020, at 15:01.
+Privacy policy
+About CDOT Wiki
+Disclaimers
+Mobile view
+Powered by MediaWiki
