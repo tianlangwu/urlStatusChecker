@@ -24,5 +24,7 @@
   "bugs": {
     "url": "https://github.com/tianlangwu/urlStatusChecker/issues"
   },
-  "homepage": "https://github.com/tianlangwu/urlStatusChecker#readme"
+  "homepage": "https://github.com/tianlangwu/urlStatusChecker#readme",
+
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
