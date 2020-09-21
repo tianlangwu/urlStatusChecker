@@ -1,12 +1,18 @@
-# urlStatusChecker
-urlStatusChecker is a command-line tool written in Node.js for check all the URL's status inside your local file.
-The current version 0.0.1.
-# how do I install this?
+# UrlStatusChecker
+UrlStatusChecker is a command-line tool written in Node.js for check all the URL's status inside your local file.
+The current version 0.0.1. <br>
+If the url is good with the status code 200, it prints "GOOD" in green. <br>
+If the url is bad with the status code 400 or 404, it prints "BAD" in Red. <br>
+If the url is redirect with the status code 301, 307, 308 , it prints "Redirect" in Blue. <br>
+If the url is broken or no response, it prints "Broken / No response" in White. <br>
+Else, it prints "UNKNOWN" in grey.
+# How do I install this?
 Download this repo. <br>
-run npm install -g pathName. For example: npm install -g C:\Seneca\OSD600\Release0.1 <br>
-or "cd" to the path directory then run npm link / npm install -g<br>
-# how do I run it?
-run the command using "urlstatuschecker filename".<br>
+Run npm install -g pathName. For example: npm install -g C:\Seneca\OSD600\Release0.1 <br>
+Or "cd" to the path directory then run npm link / npm install -g<br>
+# How do I run it?
+Run the command using "urlstatuschecker filename".<br>
+For example: urlstatuschecker test1.html
 # IMPORTANT!
 Make sure your the file you are checking is in your current directory.
 # Available command options
