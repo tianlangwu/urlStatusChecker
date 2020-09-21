@@ -33,7 +33,5 @@ else if (process.argv.length == 4) {
     else console.log("Wrong arguments passed");
 }
 
-
-
 else console.log("Wrong arguments passed");
 
