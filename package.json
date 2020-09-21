@@ -1,5 +1,5 @@
 {
-  "name": "urlstatuschecker",
+  "name": "@junyong-liu/urlstatuschecker",
   "version": "0.0.1",
   "description": "A command line tool for check all the url's status inside the local html file",
   "main": "urlstatuschecker.js",
@@ -13,5 +13,16 @@
   },
   "devDependencies": {},
   "author": "Junyong Liu",
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tianlangwu/urlStatusChecker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tianlangwu/urlStatusChecker/issues"
+  },
+  "homepage": "https://github.com/tianlangwu/urlStatusChecker#readme"
 }
