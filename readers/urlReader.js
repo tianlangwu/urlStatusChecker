@@ -8,7 +8,7 @@ const readUrl = (urlString) => {
 
         if(urls != null) sendRequest(urls[0]);
         
-        else console.log("Wrong url Format, please enter url starting with https:// or http://.");
+        else console.log("Wrong URL Format, please enter URL starting with https:// or http://.");
     
 }
 

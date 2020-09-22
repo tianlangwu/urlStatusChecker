@@ -11,11 +11,11 @@ if (process.argv.length < 2) {
 else if (process.argv.length == 2) {
     
     console.log(
-        "urlStatusChecker is a command line tool for check all the url's status inside the local html file.\n\n" +
+        "urlStatusChecker is a command line tool for check all the URL's status inside the local html file.\n\n" +
         "The command is \"node urlStatusChecker filename\"\n\n" +
         "IMPORTANT! the tool only accpet .html file and make sure your .html file is in your current direction" +
         "Available option:\n -v / -version: Current version of urlStatusChecker\n\n"+
-        "-u check urls directly\n"
+        "-u check URLs directly\n"
         )
 }
 
