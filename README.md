@@ -1,6 +1,6 @@
 # UrlStatusChecker
 UrlStatusChecker is a command-line tool written in Node.js for check all the URL's status inside your local file.
-The current version 0.0.1. <br>
+The current version 0.1. <br>
 If the url is good with the status code 200, it prints "GOOD" in green. <br>
 If the url is bad with the status code 400 or 404, it prints "BAD" in Red. <br>
 If the url is redirect with the status code 301, 307, 308 , it prints "Redirect" in Blue. <br>

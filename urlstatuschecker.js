@@ -22,7 +22,7 @@ else if (process.argv.length == 2) {
 else if (process.argv.length == 3) {
 
     if (process.argv[2] == "v" || process.argv[2] == "version" || argv.version || argv.v || argv.Version || argv.V || argv.VERSION)
-        console.log("UrlStatusChecker version 0.0.1");
+        console.log("UrlStatusChecker version 0.1");
 
     else readFile(process.argv[2]);
     
