@@ -7,8 +7,8 @@ If the url is redirect with the status code 301, 307, 308 , it prints "Redirect"
 If the url is broken or no response, it prints "Broken / No response" in White. <br>
 Else, it prints "UNKNOWN" in grey.
 # How do I install this?
-Download this repo. <br>
-Run npm install -g pathName. For example: npm install -g C:\Seneca\OSD600\Release0.1 <br>
+Run the command using "npm i -g https://github.com/tianlangwu/urlStatusChecker"<br>
+Or download the files, then "run npm install -g pathName". For example: "npm install -g C:\Seneca\OSD600\Release0.1" <br>
 Or "cd" to the path directory then run npm link / npm install -g<br>
 # How do I run it?
 Run the command using "urlstatuschecker filename".<br>
