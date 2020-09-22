@@ -10,6 +10,7 @@ Else, it prints "UNKNOWN" in grey.
 Run the command using "npm i -g https://github.com/tianlangwu/urlStatusChecker"<br>
 Or download the files, then "run npm install -g pathName". For example: "npm install -g C:\Seneca\OSD600\Release0.1" <br>
 Or "cd" to the path directory then run npm link / npm install -g<br>
+Uninstall the tool using npm uninstall command, for example: npm uninstall https://github.com/tianlangwu/urlStatusChecker.
 # How do I run it?
 Run the command using "urlstatuschecker filename".<br>
 For example: urlstatuschecker test1.html
