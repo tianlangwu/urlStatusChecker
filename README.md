@@ -13,11 +13,10 @@ Or "cd" to the path directory then run npm link / npm install -g<br>
 # How do I run it?
 Run the command using "urlstatuschecker Path\filename".<br>
 (e.g., urlstatuschecker C:\Seneca\OSD600\Release0.1\test1.html)
-# Optional Features
+#  Features
 1. URLs printed in colors depending on their status.<br>
 2. Support command line args (e.g., --version).
-4. Support redirect HTTP result codes(301, 307, 308).
-5. Won't crash when accessing a bad URL or timeouts. 
+3. Won't crash when accessing a bad URL or timeouts. 
 # Available command args
 -v / -version: Show the Current version of urlStatusChecker.<br>
 -u: Check the url status directly(e.g., "urlstatuschecker -u http://www.google.com").
