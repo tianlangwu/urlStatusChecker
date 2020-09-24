@@ -7,7 +7,10 @@ If the URL is redirect with the status code 301, 307, 308 , it prints "Redirect"
 If the RUL is broken or no response, it prints "Broken / No response" in White. <br>
 Else, it prints "UNKNOWN" in grey.
 # How do I install this?
-Run the command using "npm i -g https://github.com/tianlangwu/urlStatusChecker"<br>
+Run the command using 
+```bash
+npm i -g https://github.com/tianlangwu/urlStatusChecker
+```
 Or download the files, then "run npm install -g pathName"
 ```bash
 npm install -g C:\Seneca\OSD600\Release0.1
@@ -15,11 +18,16 @@ npm install -g C:\Seneca\OSD600\Release0.1
 Or "cd" to the path directory then run npm link / npm install -g<br>
 # How do I run it?
 Run the command using "urlstatuschecker Path\filename".<br>
-(e.g., urlstatuschecker C:\Seneca\OSD600\Release0.1\test1.html)
+```bash
+urlstatuschecker C:\Seneca\OSD600\Release0.1\test1.html
+```
 #  Features
 1. URLs printed in colors depending on their status.<br>
 2. Support command line args (e.g., --version).
 3. Won't crash when accessing a bad URL or timeouts. 
 # Available command args
 -v / -version: Show the Current version of urlStatusChecker.<br>
--u: Check the url status directly(e.g., "urlstatuschecker -u http://www.google.com").
+-u: Check the url status directly
+```bash
+urlstatuschecker -u http://www.google.com
+```
