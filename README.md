@@ -8,7 +8,10 @@ If the RUL is broken or no response, it prints "Broken / No response" in White. 
 Else, it prints "UNKNOWN" in grey.
 # How do I install this?
 Run the command using "npm i -g https://github.com/tianlangwu/urlStatusChecker"<br>
-Or download the files, then "run npm install -g pathName"(e.g., "npm install -g C:\Seneca\OSD600\Release0.1"). <br>
+Or download the files, then "run npm install -g pathName"
+```bash
+npm install -g C:\Seneca\OSD600\Release0.1
+```
 Or "cd" to the path directory then run npm link / npm install -g<br>
 # How do I run it?
 Run the command using "urlstatuschecker Path\filename".<br>
