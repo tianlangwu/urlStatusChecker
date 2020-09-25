@@ -5,11 +5,7 @@ const readUrl = require("./readers/urlReader.js")
 const pjson = require('./package.json');
 const argv = require('optimist').argv;
 
-if (process.argv.length < 2) {
-    console.log("Wrong arguments passed");
-}
-
-else if (process.argv.length == 2) {
+ if (process.argv.length == 2) {
     
     console.log(
         "urlStatusChecker is a command line tool for check all the URL's status inside the local html file.\n\n" +
