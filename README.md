@@ -15,7 +15,7 @@ Or download the files, then "run npm install -g pathName"
 ```bash
 npm install -g C:\Seneca\OSD600\Release0.1
 ```
-Or "cd" to the path directory then run npm link / npm install -g<br>
+After downloan, yo can also "cd" to the path directory then run npm link / npm install -g<br>
 # How do I run it?
 Run the command using "urlstatuschecker Path\filename".<br>
 ```bash
