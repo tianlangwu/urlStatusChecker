@@ -28,9 +28,17 @@ else if (process.argv.length == 3) {
     
 }
 
-else if (process.argv.length == 4) {
+else if (process.argv.length > 3) {
+
     if (argv.u) readUrl(process.argv[3]);
-    else console.log("Wrong arguments passed");
+    //processsing multiple file 
+    else {
+        for (var i = 2; i< process.argv.length; i++){
+            readFile(process.argv[i]);
+        }
+
+    }
+
 }
 
 else console.log("Wrong arguments passed");

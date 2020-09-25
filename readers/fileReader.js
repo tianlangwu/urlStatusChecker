@@ -7,8 +7,9 @@ fs.readFile(fileString, function (err, data) {
 
     var PATTERN = /(http|https)(:\/\/)([\w+\-&@`~#$%^*.=/?:]+)/ig
 
-    if (err) return console.log("Wrong arguments passed");
+    if (err) return console.log("Can't find file name \""+ fileString + "\" in the path");
 
+    console.log("processing file\" " + fileString + "\"");
     var string = data.toString();
     // finding all urls put them into a string array
     var urls = string.match(PATTERN);
