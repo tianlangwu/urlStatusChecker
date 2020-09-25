@@ -29,7 +29,7 @@ urlstatuschecker C:\Seneca\OSD600\Release0.1\test1.html test3.html
 1. URLs printed in colors depending on their status.<br>
 2. Support command line args (e.g., --version).
 3. Won't crash when accessing a bad URL or timeouts. 
-4. allow passing multiple file paths
+4. Allow passing multiple file paths
 # Available command args
 -v / -version: Show the Current version of urlStatusChecker.<br>
 -u: Check the url status directly
