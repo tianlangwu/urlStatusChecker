@@ -30,7 +30,7 @@ else if (process.argv.length > 3) {
     if (argv.u) readUrl(process.argv[3]);
     //processsing multiple file 
     else {
-        for (var i = 2; i< process.argv.length; i++){
+        for (let i = 2; i< process.argv.length; i++){
             readFile(process.argv[i]);
         }
 
