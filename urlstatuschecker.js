@@ -27,21 +27,26 @@ else if (process.argv.length == 3) {
 
 else if (process.argv.length > 3) {
 
+    let status = "all";
+    let json = false;
+    let i = 3;
+
+    if (argv.good) status = "good";
+    else if (argv.bad) status = "bad";
+    else if (argv.json || argv.j) json = true;
+    else {
+        status = "all";
+        i = 2;
+    }
+    
     if (argv.u) readUrl(process.argv[3]);
 
-    else if(argv.j || argv.json) {
-        for (let i = 3; i< process.argv.length; i++){
-            readFile(process.argv[i], true);
-        }
-    }
-
     else {
-        for (let i = 2; i< process.argv.length; i++){
-            readFile(process.argv[i], false);
+        for (i; i< process.argv.length; i++){
+            readFile(process.argv[i], json, status);
         }
     }
 
 }
 
 else console.log("Wrong arguments passed");
-

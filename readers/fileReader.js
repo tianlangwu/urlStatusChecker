@@ -1,7 +1,8 @@
 fs = require('fs');
 const sendRequest = require("../urlRequest/urlRequest.js")
 
-const readFile = (fileString, json) => { 
+const readFile = (fileString, json, status) => { 
+
 
 fs.readFile(fileString, function (err, data) {
 
@@ -19,7 +20,7 @@ fs.readFile(fileString, function (err, data) {
 
         for (let i = 0; i < uniqueUrls.length; i++) {
             let url = uniqueUrls[i];
-            sendRequest(url, json);
+            sendRequest(url, json, status);
         }
     }
 
