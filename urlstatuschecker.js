@@ -27,13 +27,22 @@ else if (process.argv.length == 3) {
 
 else if (process.argv.length > 3) {
 
-    if (argv.u) readUrl(process.argv[3]);
-    //processsing multiple file 
-    else {
-        for (let i = 2; i< process.argv.length; i++){
-            readFile(process.argv[i]);
-        }
+    let status = "all";
+    let i = 3;
+    if (argv.good) status = "good";
+    else if (argv.bad) status = "bad";
 
+    else {
+        status = "all";
+        i = 2;
+    }
+    
+    if (argv.u) readUrl(process.argv[3]);
+
+    else {
+        for (i; i< process.argv.length; i++){
+            readFile(process.argv[i], status);
+        }
     }
 
 }
