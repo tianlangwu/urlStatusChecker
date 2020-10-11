@@ -33,6 +33,9 @@ urlstatuschecker C:\Seneca\OSD600\Release0.1\test1.html test3.html
 # Available command args
 -v / -version: Show the Current version of urlStatusChecker.<br>
 -u: Check the url status directly
+-good: only good URLs to get displayed
+-bad：only bad URLs to get displayed
+--json/-j: output JSON file in format of [ { "url": 'https://www.google.com', "status": 200 }, { "url": 'https://bad-link.com', "status": 404 } ]
 ```bash
 urlstatuschecker -u http://www.google.com
 ```
