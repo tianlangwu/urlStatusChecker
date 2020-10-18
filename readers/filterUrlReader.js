@@ -1,12 +1,15 @@
 fs = require('fs');
 
-readUrlFilter = (file) => {
-    fs.readFile(file, (err, data) => {
+const readUrlFilter = (file) => {
+    return new Promise((resolve, reject)=>{
+        fs.readFile(file, (err, data) => {
         
-        if (err) return console.log("error in opening filter file.");
+        if (err) reject("error in opening filter file.");
 
-        var content = data.toString();
-        console.log(content);
+        resolve(data.toString().split("\n").filter(u => (u.startsWith("http://") || u.startsWith("https://"))));
+        
+        })
     })
 }
 
+module.exports = readUrlFilter;
