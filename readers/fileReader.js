@@ -1,5 +1,4 @@
 fs = require('fs');
-const { url } = require('inspector');
 const sendRequest = require("../urlRequest/urlRequest.js")
 
 const readFile = (fileString, json, status, filteredUrl) => { 
