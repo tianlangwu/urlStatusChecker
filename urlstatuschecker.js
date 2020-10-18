@@ -2,6 +2,7 @@
 
 const readFile = require("./readers/fileReader.js")
 const readUrl = require("./readers/urlReader.js")
+const readUrlFilter = require("./reader/filterUrlReader.js")
 const pjson = require('./package.json');
 const argv = require('optimist').argv;
 
@@ -21,11 +22,17 @@ else if (process.argv.length == 3) {
     if (process.argv[2] == "v" || process.argv[2] == "version" || argv.version || argv.v || argv.Version || argv.V || argv.VERSION)
         console.log("UrlStatusChecker version " + pjson.version);
 
-    else readFile(process.argv[2]);
-    
+    //else readFile(process.argv[2]);
+    else readUrlFilter(process.argv[2]);
 }
 
 else if (process.argv.length > 3) {
+
+    if (process.argv[2] == "i" || process.argv[2] == "ignore" || argv.i || argv.i || argv.ignore || argv.Ignore || argv.IGNORE){
+
+        
+
+    }
 
     let status = "all";
     let json = false;
