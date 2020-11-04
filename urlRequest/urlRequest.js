@@ -1,52 +1,57 @@
 const request = require("request");
-const chalk = require('chalk');
+const chalk = require("chalk");
 
 const sendRequest = (url, json, status) => {
+  return new Promise((resolve) => {
+    request(url, {method: "HEAD"}, function (_, res) {
+      if (!res) return resolve();
 
-    return new Promise((resolve) => {
-
-        request(url, { method: "HEAD" }, function (_, res) {
-
-            if (!res) return resolve();
-
-            if (json == true) {
-                jsonObj = {
-                    url: url,
-                    status: res.statusCode.toString()
-                }
-                console.log(JSON.stringify(jsonObj));
-            }
-
-            else {
-                if (status == "good") {
-                    if (res.statusCode == 200) console.log(chalk.green("[GOOD] " + url));
-                }
-
-                else if (status == "bad") {
-                    if (res.statusCode == 400 || res.statusCode == 404) console.log(chalk.red("[BAD] " + url));
-                }
-
-                else {
-                    if (res.statusCode == 200) console.log(chalk.green("[GOOD] " + url));
-                    else if (res.statusCode == 400 || res.statusCode == 404) console.log(chalk.red("[BAD] " + url));
-                    else if (res.statusCode == 301 || res.statusCode == 307 || res.statusCode == 308) console.log(chalk.blue("[Redirect]" + url))
-                    else console.log(chalk.grey("[UNKNOWN]" + url));
-                }
-            }
-            resolve();
-
-        })
-    })
-}
-
-const checkUrls = (urls, json, status) => {
-    return Promise.all(
-        urls.map((url) => sendRequest(url, json, status))
-    );
+      if (json == true) {
+        const jsonObj = {
+          url: url,
+          status: res.statusCode.toString(),
+        };
+        console.log(JSON.stringify(jsonObj));
+      } else {
+        if (status == "good") {
+          if (res.statusCode == 200) console.log(chalk.green("[GOOD] " + url));
+        } else if (status == "bad") {
+          if (res.statusCode == 400 || res.statusCode == 404)
+            console.log(chalk.red("[BAD] " + url));
+        } else {
+          if (res.statusCode == 200) console.log(chalk.green("[GOOD] " + url));
+          else if (res.statusCode == 400 || res.statusCode == 404)
+            console.log(chalk.red("[BAD] " + url));
+          else if (
+            res.statusCode == 301 ||
+            res.statusCode == 307 ||
+            res.statusCode == 308
+          )
+            console.log(chalk.blue("[Redirect]" + url));
+          else console.log(chalk.grey("[UNKNOWN]" + url));
+        }
+      }
+      resolve();
+    });
+  });
 };
 
-module.exports =
-{
-    sendRequest,
-    checkUrls
-}
+const checkUrls = (urls, json, status) => {
+  return Promise.all(urls.map((url) => sendRequest(url, json, status)));
+};
+
+const checkTelescope = () => {
+  request("http://localhost:3000/posts", function (error, response, body) {
+    let obj = JSON.parse(body);
+    for (let i = 0; i < 10; i++) {
+      let url = "http://localhost:3000" + obj[i].url;
+      sendRequest(url);
+    }
+  });
+};
+
+module.exports = {
+  sendRequest,
+  checkUrls,
+  checkTelescope,
+};

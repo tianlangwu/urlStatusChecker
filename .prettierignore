@@ -1,0 +1,11 @@
+# Ignore artifacts:
+./node_modules
+./test
+.gitignore
+.prettierignore
+LICENSE
+README.md
+CONTRIBUTING.MD
+.eslintignore
+package.json
+package-lock.json
