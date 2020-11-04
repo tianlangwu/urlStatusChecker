@@ -45,8 +45,19 @@ const checkUrls = (urls, json, status) => {
     );
 };
 
+const checkTelescope = () => {
+    request("http://localhost:3000/posts", function (error, response, body){
+        let obj = JSON.parse(body);
+        for (let i = 0; i < 10; i++){
+            let url = "http://localhost:3000" + obj[i].url;
+            sendRequest(url);
+        }
+    });
+}
+
 module.exports =
 {
     sendRequest,
-    checkUrls
+    checkUrls,
+    checkTelescope
 }

@@ -2,6 +2,7 @@
 const checkFiltertedUrls = require("./readers/filterUrlReader.js")
 const pjson = require('./package.json');
 const MyFile = require("./readers/fileReader.js");
+const urlRequest = require("./urlRequest/urlRequest.js");
 const argv = require('optimist').argv;
 
 async function run() {
@@ -21,6 +22,9 @@ async function run() {
     else if (process.argv.length == 3) {
         if (process.argv[2] == "v" || process.argv[2] == "version" || argv.version || argv.v || argv.Version || argv.V || argv.VERSION)
             console.log("UrlStatusChecker version " + pjson.version);
+        else if(process.argv[2] == "telescope"){
+            urlRequest.checkTelescope();
+        }
         else myFile.readFile(process.argv[2]);
     }
 
