@@ -5,7 +5,6 @@ const sendRequest = (url, json, status) => {
   return new Promise((resolve) => {
     request(url, {method: "HEAD"}, function (_, res) {
       if (!res) return resolve();
-
       if (json == true) {
         const jsonObj = {
           url: url,
@@ -27,8 +26,8 @@ const sendRequest = (url, json, status) => {
             res.statusCode == 307 ||
             res.statusCode == 308
           )
-            console.log(chalk.blue("[Redirect]" + url));
-          else console.log(chalk.grey("[UNKNOWN]" + url));
+            console.log(chalk.blue("[Redirect] " + url));
+          else console.log(chalk.grey("[UNKNOWN] " + url));
         }
       }
       resolve();
@@ -40,18 +39,7 @@ const checkUrls = (urls, json, status) => {
   return Promise.all(urls.map((url) => sendRequest(url, json, status)));
 };
 
-const checkTelescope = () => {
-  request("http://localhost:3000/posts", function (error, response, body) {
-    let obj = JSON.parse(body);
-    for (let i = 0; i < 10; i++) {
-      let url = "http://localhost:3000" + obj[i].url;
-      sendRequest(url);
-    }
-  });
-};
-
 module.exports = {
   sendRequest,
   checkUrls,
-  checkTelescope,
 };

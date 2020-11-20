@@ -2,8 +2,8 @@
 const checkFiltertedUrls = require("./readers/filterUrlReader.js");
 const pjson = require("./package.json");
 const MyFile = require("./readers/fileReader.js");
-const urlRequest = require("./urlRequest/urlRequest.js");
 const argv = require("optimist").argv;
+const {readUrl} = require("./readers/readUrl");
 
 async function run() {
   let myFile = new MyFile();
@@ -27,9 +27,7 @@ async function run() {
       argv.VERSION
     )
       console.log("UrlStatusChecker version " + pjson.version);
-    else if (process.argv[2] == "telescope") {
-      urlRequest.checkTelescope();
-    } else myFile.readFile(process.argv[2]);
+    else myFile.readFile(process.argv[2]);
   } else if (process.argv.length > 3) {
     if (
       process.argv[2] == "i" ||
@@ -49,10 +47,11 @@ async function run() {
       else if (argv.json || argv.j) myFile.json = true;
       else index = 2;
 
-      if (argv.u) myFile.readUrl(process.argv[3]);
-
-      for (let i = index; i < process.argv.length; i++) {
-        await myFile.readFile(process.argv[i]);
+      if (argv.u) readUrl(process.argv[3]);
+      else {
+        for (let i = index; i < process.argv.length; i++) {
+          await myFile.readFile(process.argv[i]);
+        }
       }
     }
   } else console.log("Wrong arguments passed");

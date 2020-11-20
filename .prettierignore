@@ -9,3 +9,4 @@ CONTRIBUTING.MD
 .eslintignore
 package.json
 package-lock.json
+./coverage
