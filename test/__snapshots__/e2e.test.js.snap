@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`end-to-end integration prints tool version with arument -v 1`] = `"UrlStatusChecker version 0.0.1"`;
+
+exports[`end-to-end integration prints tool with no arguments pass 1`] = `
+"urlStatusChecker is a command line tool for check all the URL's status inside the local html file.
+
+The command is \\"node urlStatusChecker filename\\"
+
+Available option:
+ -v / -version: Current version of urlStatusChecker
+
+-u check URLs directly
+"
+`;
+
+exports[`end-to-end integration prints url information with a path 1`] = `
+"processing file \\"tests/test1.html\\"
+[GOOD] https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo"
+`;
+
+exports[`end-to-end integration prints url information with ignore arugment 1`] = `
+"processing ignored file tests/test2.html
+processing file \\"tests/test2.html\\"
+[GOOD] http://s9y.org"
+`;
+
+exports[`end-to-end integration prints url information with path and json output 1`] = `
+"processing file \\"tests/test1.html\\"
+{\\"url\\":\\"https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo\\",\\"status\\":\\"200\\"}"
+`;
+
+exports[`end-to-end integration prints url information with path and only bad output 1`] = `"processing file \\"tests/test1.html\\""`;
+
+exports[`end-to-end integration prints url information with path and only good output 1`] = `
+"processing file \\"tests/test1.html\\"
+[GOOD] https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo"
+`;
+
+exports[`end-to-end integration prints url information with two filepath 1`] = `
+"processing file \\"tests/test1.html\\"
+[GOOD] https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo
+processing file \\"tests/test2.html\\"
+[GOOD] https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo
+[GOOD] http://s9y.org"
+`;
+
+exports[`end-to-end integration prints url information with url string 1`] = `"[GOOD] https://www.google.com"`;
