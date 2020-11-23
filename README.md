@@ -49,10 +49,10 @@ urlstatuschecker C:\Seneca\OSD600\Release0.1\test1.html test3.html
 
 -v / -version: Show the Current version of urlStatusChecker.<br>
 -u: Check the url status directly
--good: only good URLs to get displayed
--bad：only bad URLs to get displayed
---json/-j: output JSON file in format of [ { "url": 'https://www.google.com', "status": 200 }, { "url": 'https://bad-link.com', "status": 404 } ]
--i/--ignore: allows specifying two files, first file should contain the links to be ignored if they are contained in the second file.
+-g: only good URLs to get displayed
+-b：only bad URLs to get displayed
+-j: output JSON file in format of [ { "url": 'https://www.google.com', "status": 200 }, { "url": 'https://bad-link.com', "status": 404 } ]
+-i/: allows specifying two files, first file should contain the links to be ignored if they are contained in the second file.
 
 ```bash
 urlstatuschecker -u http://www.google.com
