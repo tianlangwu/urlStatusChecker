@@ -16,13 +16,13 @@ Available option:
 
 exports[`end-to-end integration prints url information with a path 1`] = `
 "processing file \\"tests/test1.html\\"
-[32m[GOOD] https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo[39m"
+[GOOD] https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo"
 `;
 
 exports[`end-to-end integration prints url information with ignore arugment 1`] = `
 "processing ignored file tests/test2.html
 processing file \\"tests/test2.html\\"
-[32m[GOOD] http://s9y.org[39m"
+[GOOD] http://s9y.org"
 `;
 
 exports[`end-to-end integration prints url information with path and json output 1`] = `
@@ -34,15 +34,15 @@ exports[`end-to-end integration prints url information with path and only bad ou
 
 exports[`end-to-end integration prints url information with path and only good output 1`] = `
 "processing file \\"tests/test1.html\\"
-[32m[GOOD] https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo[39m"
+[GOOD] https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo"
 `;
 
 exports[`end-to-end integration prints url information with two filepath 1`] = `
 "processing file \\"tests/test1.html\\"
-[32m[GOOD] https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo[39m
+[GOOD] https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo
 processing file \\"tests/test2.html\\"
-[32m[GOOD] https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo[39m
-[32m[GOOD] http://s9y.org[39m"
+[GOOD] https://docs.github.com/en/enterprise/2.15/user/articles/create-a-repo
+[GOOD] http://s9y.org"
 `;
 
-exports[`end-to-end integration prints url information with url string 1`] = `"[32m[GOOD] https://www.google.com[39m"`;
+exports[`end-to-end integration prints url information with url string 1`] = `"[GOOD] https://www.google.com"`;

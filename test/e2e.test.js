@@ -1,15 +1,16 @@
 const execa = require("execa");
 const {describe, test, expect} = require("@jest/globals");
+expect.addSnapshotSerializer(require("jest-snapshot-serializer-ansi"));
 
 describe("end-to-end integration", () => {
   test("prints tool with no arguments pass", async () => {
-    const {stdout, stderr} = await execa("node urlstatuschecker");
+    const {stdout, stderr} = await execa("node", ["urlstatuschecker"]);
     expect(stdout).toMatchSnapshot();
     expect(stderr).toEqual("");
   });
 
   test("prints tool version with arument -v", async () => {
-    const {stdout, stderr} = await execa("node urlstatuschecker -v");
+    const {stdout, stderr} = await execa("node", ["urlstatuschecker", "-v"]);
     expect(stdout).toMatchSnapshot();
     expect(stderr).toEqual("");
   });
