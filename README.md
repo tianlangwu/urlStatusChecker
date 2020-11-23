@@ -32,7 +32,7 @@ Run the command using "urlstatuschecker Path\filename".<br>
 urlstatuschecker C:\Seneca\OSD600\Release0.1\test1.html
 ```
 
-For multiple file
+For multiple file 
 
 ```bash
 urlstatuschecker C:\Seneca\OSD600\Release0.1\test1.html test3.html
