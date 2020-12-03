@@ -5,14 +5,13 @@ const MyFile = require("./readers/fileReader.js");
 const argv = require("optimist").argv;
 const {readUrl} = require("./readers/readUrl");
 
-async function run() {
+async function main() {
   let myFile = new MyFile();
 
   if (process.argv.length == 2) {
     console.log(
       "urlStatusChecker is a command line tool for check all the URL's status inside the local html file.\n\n" +
         'The command is "node urlStatusChecker filename"\n\n' +
-        "IMPORTANT! the tool only accpet .html file and make sure your .html file is in your current direction" +
         "Available option:\n -v / -version: Current version of urlStatusChecker\n\n" +
         "-u check URLs directly\n",
     );
@@ -20,11 +19,8 @@ async function run() {
     if (
       process.argv[2] == "v" ||
       process.argv[2] == "version" ||
-      argv.version ||
       argv.v ||
-      argv.Version ||
-      argv.V ||
-      argv.VERSION
+      argv.V
     )
       console.log("UrlStatusChecker version " + pjson.version);
     else myFile.readFile(process.argv[2]);
@@ -33,18 +29,14 @@ async function run() {
       process.argv[2] == "i" ||
       process.argv[2] == "ignore" ||
       argv.i ||
-      argv.i ||
-      argv.ignore ||
-      argv.Ignore ||
-      argv.IGNORE
+      argv.i
     ) {
       checkFiltertedUrls(process.argv[3]);
     } else {
       let index = 3;
-      if (argv.good) myFile.status = "good";
-      else if (argv.bad) myFile.status = "bad";
-      else if (argv.all);
-      else if (argv.json || argv.j) myFile.json = true;
+      if (argv.g) myFile.status = "good";
+      else if (argv.b) myFile.status = "bad";
+      else if (argv.j) myFile.json = true;
       else index = 2;
 
       if (argv.u) readUrl(process.argv[3]);
@@ -57,4 +49,4 @@ async function run() {
   } else console.log("Wrong arguments passed");
 }
 
-run();
+main();
