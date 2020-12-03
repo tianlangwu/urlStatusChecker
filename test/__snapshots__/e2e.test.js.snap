@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`end-to-end integration prints tool version with arument -v 1`] = `"UrlStatusChecker version 0.0.1"`;
+exports[`end-to-end integration prints tool version with arument -v 1`] = `"UrlStatusChecker version 1.0.0"`;
 
 exports[`end-to-end integration prints tool with no arguments pass 1`] = `
 "urlStatusChecker is a command line tool for check all the URL's status inside the local html file.
