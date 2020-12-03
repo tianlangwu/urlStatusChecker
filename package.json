@@ -1,6 +1,6 @@
 {
   "name": "urlstatuschecker",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A command line tool for check all the url's status inside the local html file",
   "main": "urlstatuschecker.js",
   "bin": {
