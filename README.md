@@ -57,3 +57,7 @@ urlstatuschecker C:\Seneca\OSD600\Release0.1\test1.html test3.html
 ```bash
 urlstatuschecker -u http://www.google.com
 ```
+
+# How to install urlstatuschecker package
+
+urlstatuschecker is published to npm. To install it, you can type npm i urlstatuschecker on the command line.
